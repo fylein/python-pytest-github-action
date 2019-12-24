@@ -1,0 +1,15 @@
+name: Python Pytest Github Action
+description: 'Pytest Github Action running on python slim docker image'
+branding:
+  icon: box
+  color: gray-dark
+runs-on: ubuntu-latest
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+steps:
+- uses: actions/checkout@master
+- name: Python Pylint Github Action
+  uses: fylein/python-pytest-github-action@master
+  with:
+    args: pytest --help
